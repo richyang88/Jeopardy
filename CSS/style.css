@@ -41,14 +41,23 @@ body{
     background: green;
     width: 100%;
 }
-.row1sub{
-    width: 16%;
+
+.subRows{
+    width:25%;
     border: solid;
-    background: red;
+    background-color: grey;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.r10{
-    background: green;
+
+.a1Question{
+background-color:yellow;
+height: 100%;
+width: 100%;
+position: absolute;
+z-index: 11
 }
-.r10:hover{
-    background: yellow;
-}
+
+

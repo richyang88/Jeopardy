@@ -1,9 +1,3 @@
-function layout(event){
-    let x = document.createElement('button')
-    console.log("working")
-    return x;
-}
-layout();
  
 // function to create divs for rows // stretch goal
 // for(let i=0; i<6; i++){
