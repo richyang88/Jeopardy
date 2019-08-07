@@ -36,6 +36,18 @@ body{
     border: solid;
     background: red;
 }
+
+.rowCategories{
+    display:flex;
+    width: 100%;
+}
+
+.subCat{
+    width:25%;
+    border: solid;
+    background-color:purple;
+}
+
 .row1{
     display:flex;
     background: green;
