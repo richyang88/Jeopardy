@@ -5,6 +5,11 @@ function layout(event){
 }
 layout();
  
-for(let i=0; i<15; i++){
-    
+//create divs for rows
+for(let i=0; i<6; i++){
+let newDivs = document.createElement('div');
+newDivs.className="rows";
+document.querySelector('.rows1')[0].appendChild(newDivs);
 }
+
+
