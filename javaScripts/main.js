@@ -10,6 +10,12 @@
 
 function move(){
     console.log("working")
-}
+    document.getElementById('questionBg').animate([
+        {transform: 'translateX(-500px)'},
+        {transform: 'translate(500px)'}],
+        {duration: 1000})
+
+    }
+    
 
 move()
