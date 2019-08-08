@@ -13,22 +13,16 @@ function move(){
     questBox.style.display ="block";
     console.log("working")
 
-
-
-
-
-
-
-    // questBox.animate([
-    //     {transform: 'translateX(-1000px)'},
-    //     {transform: 'translateX(0px)'},
-    //     {'animation-play-state:' paused},
-    //     {transform: 'translateX(-1000px)'},
-    //     // {endDelay: 100000000},
-    //     ],
-    //     {duration: 5000})
-
-    // }
+    questBox.animate([
+        {transform: 'translateX(-1000px)'},
+        {transform: 'translateX(0px)'},
+        // PAUSE HERE
+        {transform: 'translateX(-1000px)'}],
+        {duration: 5000})
+    }
     
+    questBox.animate([
+        
+    ])
 
-move()
+move();
