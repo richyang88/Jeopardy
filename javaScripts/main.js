@@ -14,8 +14,11 @@ function move(){
     console.log("working")
     questBox.animate([
         {transform: 'translateX(-1000px)'},
-        {transform: 'translate(0px)'}],
-        {duration: 1000})
+        {endDelay: 10000},
+        {transform: 'translateX(0px)'},
+        // {endDelay: 10000},
+        {transform: 'translateX(-1000px)'}],
+        {duration: 5000})
 
     }
     

@@ -91,13 +91,17 @@ body{
 
 /* Start styling Questions */
 .questions{
-    height: 400px;
-    width: 400px;
+    height: 60vh;
+    min-height: 400px;
+    width: 60vw;
+    /* max-width: 600px; */
     border: solid;
-    background-color: burlywood;
+    background-color: white;
+    /* transform: translate(-50px,100px); */
     position: absolute;
     display:none;
-    /* transform: translate(-500px, 50px); */
     z-index: 1000;
-    background-image: url('../images/snakeHead.png');
+    background-image: url('../images/snakeHead.png'); 
+    background-size: cover;
+    background-position: center; 
 }
