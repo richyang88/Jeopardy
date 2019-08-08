@@ -89,4 +89,12 @@ body{
     width: 100%;
 }
 
-
+/* Start styling Questions */
+.questions{
+    height: 400px;
+    width: 400px;
+    border: solid;
+    background-color: burlywood;
+    position: absolute;
+    transform: translate(-500px, 50px);
+}

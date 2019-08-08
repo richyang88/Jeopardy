@@ -8,4 +8,8 @@
 // // document.querySelector('.row3').appendChild(newDivs);
 // }
 
+function move(){
+    console.log("working")
+}
 
+move()
