@@ -12,20 +12,27 @@ body{
     align-items: center;
 }
 
+/* background and container for the jepordy board */
 .jepBg{
     height: 95%;
     width: 95%;
     border: solid;
     background: blue;
 }
-
+/* Row and divs for score */
 .rowScore{
     display:flex;
     justify-content: space-around;
     border: solid;
-    
 }
 
+.scores{
+    border-right: solid;
+    width: 50%;
+}
+/* end of scores */
+
+/* Generic styling of rows */
 .rowBg{
     height: 94%;
     border: solid;
@@ -33,10 +40,13 @@ body{
 .rows{
     height: 24%;
     width: 16%;
-    border: solid;
+    border: solid gold;
     background: red;
+    color: white;
+    text-align: center;
 }
-
+/* End of Generic row Styling */
+/* start styling category section */
 .rowCategories{
     display:flex;
     width: 100%;
@@ -47,7 +57,8 @@ body{
     border: solid;
     background-color:purple;
 }
-
+/* end of styling category section */
+/* Start Styling for Question of Rows */
 .row1{
     display:flex;
     background: green;
@@ -64,12 +75,6 @@ body{
     justify-content: center;
 }
 
-.a1Question{
-background-color:yellow;
-height: 100%;
-width: 100%;
-position: absolute;
-z-index: 11
-}
+
 
 
