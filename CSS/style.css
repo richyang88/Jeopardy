@@ -96,5 +96,8 @@ body{
     border: solid;
     background-color: burlywood;
     position: absolute;
-    transform: translate(-500px, 50px);
+    display:none;
+    /* transform: translate(-500px, 50px); */
+    z-index: 1000;
+    background-image: url('../images/snakeHead.png');
 }

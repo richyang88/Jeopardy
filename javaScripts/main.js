@@ -9,10 +9,12 @@
 // }
 
 function move(){
+    let questBox = document.getElementById('questionBg');
+    questBox.style.display ="block";
     console.log("working")
-    document.getElementById('questionBg').animate([
-        {transform: 'translateX(-500px)'},
-        {transform: 'translate(500px)'}],
+    questBox.animate([
+        {transform: 'translateX(-1000px)'},
+        {transform: 'translate(0px)'}],
         {duration: 1000})
 
     }
