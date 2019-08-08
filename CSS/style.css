@@ -74,7 +74,19 @@ body{
     align-items: center;
     justify-content: center;
 }
+/* End of Row 1 styling */
+/* Start of Row 2 styling */
+.row2{
+    display:flex;
+    width: 100%;
+    background: yellow;
+}
 
-
+/* End of Row 2 Styling */
+/* Start of Row 3 Styling */
+.row3{
+    display:flex;
+    width: 100%;
+}
 
 
