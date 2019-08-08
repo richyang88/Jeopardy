@@ -12,15 +12,23 @@ function move(){
     let questBox = document.getElementById('questionBg');
     questBox.style.display ="block";
     console.log("working")
-    questBox.animate([
-        {transform: 'translateX(-1000px)'},
-        {endDelay: 10000},
-        {transform: 'translateX(0px)'},
-        // {endDelay: 10000},
-        {transform: 'translateX(-1000px)'}],
-        {duration: 5000})
 
-    }
+
+
+
+
+
+
+    // questBox.animate([
+    //     {transform: 'translateX(-1000px)'},
+    //     {transform: 'translateX(0px)'},
+    //     {'animation-play-state:' paused},
+    //     {transform: 'translateX(-1000px)'},
+    //     // {endDelay: 100000000},
+    //     ],
+    //     {duration: 5000})
+
+    // }
     
 
 move()
