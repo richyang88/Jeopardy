@@ -8,21 +8,36 @@
 // // document.querySelector('.row3').appendChild(newDivs);
 // }
 
-function move(){
+function move(event){
     let questBox = document.getElementById('questionBg');
     questBox.style.display ="block";
     console.log("working")
+    //move center to out of screen
+    questBox.animate([
+        {transform: 'translateX(0px)'},
+        {transform: 'translateX(-1500px)'}
+    ],
+        {duration: 5000})
 
+    // pause
+    questBox.animate([
+        {transform: 'translateX(0px)'},
+        {transform: 'translateX(0px)'}
+    ],
+        {duration: 4000})
+
+    //move off screen to center
     questBox.animate([
         {transform: 'translateX(-1000px)'},
-        {transform: 'translateX(0px)'},
+        {transform: 'translateX(0px)'}
         // PAUSE HERE
-        {transform: 'translateX(-1000px)'}],
-        {duration: 5000})
-    }
+        ],
+        {duration: 1000})
     
-    questBox.animate([
-        
-    ])
 
-move();
+
+
+}
+
+document.querySelector('#start100Btn').addEventListener('click', move)
+// move();
