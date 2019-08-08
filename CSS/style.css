@@ -97,11 +97,22 @@ body{
     /* max-width: 600px; */
     border: solid;
     background-color: white;
-    /* transform: translate(-50px,100px); */
+    
+    transform: translate(-2000px,0px);
     position: absolute;
-    display:none;
+    /* display:none; */
     z-index: 1000;
     background-image: url('../images/snakeHead.png'); 
     background-size: cover;
     background-position: center; 
+}
+
+.questAnimate{
+    animation: questionFrame 20s;
+}
+
+@keyframes questionFrame {
+16%{transform: translate(0px,0px)}
+67%{transform: translate(0px,0px)}
+16%{transform: translate(-2000px,0px)}
 }
