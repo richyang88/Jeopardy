@@ -115,7 +115,7 @@ body{
 }
 
 .questAnimate{
-    animation: questionFrame 20s;
+    animation: questionFrame 10s;
 }
 
 @keyframes questionFrame {

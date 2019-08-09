@@ -11,10 +11,21 @@
 function move(event){
     let questBox = document.getElementById('questionBg');
     questBox.style.display ="block";
-    console.log("working")
-    questBox.classList.add('questAnimate')
+    console.log("working");
+    questBox.classList.add('questAnimate');
+    setTimeout(function(){
+        $('#questionBg').removeClass('questAnimate');
+        console.log("removing working")
+    },4000);
+
+    // removeClass();
 
 }
-
+function removeClass(){
+    let questBox = document.getElementById('questionBg');
+    questBox.classList.remove('questAnimate');
+    console.log("removing")
+}
 document.querySelector('#start100Btn').addEventListener('click', move)
-// move();
+document.querySelector('#start200Btn').addEventListener('click', move)
+document.querySelector('#start300Btn').addEventListener('click', move)
