@@ -25,6 +25,7 @@ function move(event){
 
     //create div to add to #questionBg
     let question = document.createElement("div");
+    //top row found on style.css near line 128
     question.className='questionTopRow';
     let questionShow= question.innerHTML = questionDb.row1hi1Q[0].show1Q;
     questBox.appendChild(question);

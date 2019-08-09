@@ -127,7 +127,7 @@ body{
 
     .questionTopRow{
         /* declared in main.js, near line 20 */
-        height: 20%;
+        height: 60%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -137,6 +137,9 @@ body{
     .choiceBtn{
         /* declared in main.js, near line 28 */
         width: 100%;
+        height: 10%;
+        font-size: 20px;
+        background-color: greenyellow
     }
 
 
