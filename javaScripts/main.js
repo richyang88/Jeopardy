@@ -33,7 +33,17 @@ document.querySelector('#start300Btn').addEventListener('click', move)
 
 //Questions Obj
 let questionDb = {
-    row1hi1Q:[],
-    row1hi1A:[],
+    row1hi1Q:[
+        {
+            question: "English Slang for 'Hey'",
+            answers0:["Question set 1"]
+        }
+        // quest:["English Slang for 'Hey'", "Question 2"],
+        // answers0:["Question set 1"],
+        // answer1:["Question set 2"]
+    ]
 
 }
+// for(let i=0; i<=questionDb.row1hi1Q.length;i++){
+    console.log(questionDb.row1hi1Q[0])
+// }
