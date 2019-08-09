@@ -39,36 +39,23 @@ function move(event){
         let choiceBtn = choice1.innerHTML = (i+1) + ") " + questionDb.row1hi1Q[0].show2A[i];
         questBox.appendChild(choice1);
 
-        
+        //event listener for choices 
         choice1.addEventListener('click', check)
 
         function check(event){
             if(event.target.id=='option1'){
-                console.log('Right')
+                console.log('Right');
+
+
             }else{
                 console.log('wrong');
-                
+                return;
             }
-            
+        }
+        
     }
 
-    //player clicked this button with the right id
-    // document.querySelector('.choiceBtn').addEventListener('click', right)
-
-    // function right(event){
-    //     if(event.target.id=='option1'){
-    //         console.log('Right')
-    //     }else{
-    //         console.log('wrong')
-    //     }
-    }
-    
-    // if (document.querySelector!=='#option1'){
-    //     document.querySelector('#option1').addEventListener('click', wrong)
-    // }
-
-
-    //after 17 seconds remove class
+    //after 17 seconds remove class using Jquery
     setTimeout(function(){
         $('#questionBg').removeClass('questAnimate');
         console.log("removing working")
