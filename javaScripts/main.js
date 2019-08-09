@@ -30,14 +30,42 @@ function move(event){
     let questionShow= question.innerHTML = questionDb.row1hi1Q[0].show1Q;
     questBox.appendChild(question);
 
-
+    //for loop to pull from Questions Database
     for(let i=0; i<questionDb.row1hi1Q[0].show2A.length; i++){
         let choice1=document.createElement('button');
-        choice1.className="choiceBtn option"+[i];
-        console.log(choice1.id)
-        let choiceBtn = choice1.innerHTML= (i+1) + ") " + questionDb.row1hi1Q[0].show2A[i];
+        choice1.className = "choiceBtn option"+[i];
+        choice1.id = "option"+[i];
+        console.log(choice1.id);
+        let choiceBtn = choice1.innerHTML = (i+1) + ") " + questionDb.row1hi1Q[0].show2A[i];
         questBox.appendChild(choice1);
+
+        
+        choice1.addEventListener('click', check)
+
+        function check(event){
+            if(event.target.id=='option1'){
+                console.log('Right')
+            }else{
+                console.log('wrong');
+                
+            }
+            
     }
+
+    //player clicked this button with the right id
+    // document.querySelector('.choiceBtn').addEventListener('click', right)
+
+    // function right(event){
+    //     if(event.target.id=='option1'){
+    //         console.log('Right')
+    //     }else{
+    //         console.log('wrong')
+    //     }
+    }
+    
+    // if (document.querySelector!=='#option1'){
+    //     document.querySelector('#option1').addEventListener('click', wrong)
+    // }
 
 
     //after 17 seconds remove class
