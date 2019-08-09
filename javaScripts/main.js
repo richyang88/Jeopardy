@@ -11,13 +11,19 @@
 //Buttons to start the row, making questions appear
 function move(event){
     let questBox = document.getElementById('questionBg');
-    questBox.style.display ="block";
+    // questBox.style.display ="block";
     console.log("working");
     questBox.classList.add('questAnimate');
+    let choice1=document.createElement('button');
+    choice1.innerHTML= "Buttonz";
+
+
+
+
     setTimeout(function(){
         $('#questionBg').removeClass('questAnimate');
         console.log("removing working")
-    },22000);
+    },17000);
 
     // removeClass();
 
@@ -33,17 +39,27 @@ document.querySelector('#start300Btn').addEventListener('click', move)
 
 //Questions Obj
 let questionDb = {
+    //row 1, column hello questions
     row1hi1Q:[
+        //index 0, question set 1
         {
-            question: "English Slang for 'Hey'",
-            answers0:["Question set 1"]
-        }
-        // quest:["English Slang for 'Hey'", "Question 2"],
-        // answers0:["Question set 1"],
-        // answer1:["Question set 2"]
-    ]
+        //named show1 or 2 to make questions display first due to order
+        show1Q: "English Slang for 'Hey'",
+        show2A:["Question set 1"]
+        },
+        //index 1, question set 2
+        {
+            show1Q: "Question 2",
+            show2A:["Answer set 2"]
+        },
+        {
+            show1Q: "Question 3",
+            show2Q:["Answer set 3"]
+        }] // end of r1 hello Questions
 
 }
-// for(let i=0; i<=questionDb.row1hi1Q.length;i++){
-    console.log(questionDb.row1hi1Q[0])
-// }
+
+
+
+
+document.getElementById("questionBg").innerHTML = questionDb.row1hi1Q[1].show1Q + "<br></br>"+ questionDb.row1hi1Q[1].show2A
