@@ -30,3 +30,10 @@ function removeClass(){
 document.querySelector('#start100Btn').addEventListener('click', move)
 document.querySelector('#start200Btn').addEventListener('click', move)
 document.querySelector('#start300Btn').addEventListener('click', move)
+
+//Questions Obj
+let questionDb = {
+    row1hi1Q:[],
+    row1hi1A:[],
+
+}
