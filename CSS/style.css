@@ -40,9 +40,8 @@ body{
 .rows{
     height: 24%;
     width: 16%;
-    border: solid gold;
+    border: solid black;
     background: red;
-    color: white;
     text-align: center;
 }
 /* End of Generic row Styling */
@@ -50,11 +49,13 @@ body{
 .rowCategories{
     display:flex;
     width: 100%;
+    color: white;
+    
 }
 
 .subCat{
     width:25%;
-    border: solid;
+    border: solid black;
     background-color:purple;
 }
 /* end of styling category section */
@@ -74,6 +75,12 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+.row1b1{
+    border: solid black;
+    background-color: orange;
+}
+
 /* End of Row 1 styling */
 /* Start of Row 2 styling */
 .row2{
