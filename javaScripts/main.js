@@ -11,7 +11,6 @@
 //Buttons to start the row, making questions appear
 function move(event){
     let questBox = document.getElementById('questionBg');
-    // questBox.style.display ="block";
     console.log("working");
     questBox.classList.add('questAnimate');
 
@@ -23,10 +22,9 @@ function move(event){
 
     for(let i=0; i<questionDb.row1hi1Q[0].show2A.length; i++){
         let choice1=document.createElement('button');
+        choice1.id="choiceBtn"+[i];
+        console.log(choice1.id)
         let choiceBtn = choice1.innerHTML= (i+1) + ") " + questionDb.row1hi1Q[0].show2A[i];
-        
-        
-        
         questBox.appendChild(choice1);
     }
 
@@ -57,7 +55,8 @@ let questionDb = {
         {
         //named show1 or 2 to make questions display first due to order
         show1Q: "English Slang for 'Hey'",
-        show2A:["Question set 1", "Yo", "Good Day kind Sir", "Top of the Morning Govenar"]
+        show2A:["Question set 1", "Yo", "Good Day kind Sir", "Top of the Morning Govenar"],
+        points: 100
         },
         //index 1, question set 2
         {
@@ -74,4 +73,4 @@ let questionDb = {
 
 
 
-// document.getElementById("questionBg").innerHTML = questionDb.row1hi1Q[1].show1Q + "<br></br>"+ questionDb.row1hi1Q[1].show2A
+// document.getElementById("questionBg").innerHTML = questionDb.row1hi1Q[0].show1Q + "<br></br>"+ questionDb.row1hi1Q[1].show2A
