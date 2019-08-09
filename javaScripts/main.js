@@ -16,35 +16,37 @@ function move(event){
     //can be found first on CSS/style.css line 119
     questBox.classList.add('questAnimate');
 
+    // Add hide class to buttons, seen on style.css line 69
+    document.getElementById('start100Btn').classList.add('hideBtn');
+    document.getElementById('row1a1').innerHTML="You Started Here";
+    document.getElementById('row1a1').classList.add('row1b1');
+    document.getElementById('start200Btn').classList.add('hideBtn');
+    document.getElementById('start300Btn').classList.add('hideBtn');
 
+    //create div to add to #questionBg
     let question = document.createElement("div");
-    question.className('questionTopRow')
+    question.className='questionTopRow';
     let questionShow= question.innerHTML = questionDb.row1hi1Q[0].show1Q;
     questBox.appendChild(question);
 
 
     for(let i=0; i<questionDb.row1hi1Q[0].show2A.length; i++){
         let choice1=document.createElement('button');
-        choice1.id="choiceBtn"+[i];
+        choice1.className="choiceBtn option"+[i];
         console.log(choice1.id)
         let choiceBtn = choice1.innerHTML= (i+1) + ") " + questionDb.row1hi1Q[0].show2A[i];
         questBox.appendChild(choice1);
     }
 
 
-
+    //after 17 seconds remove class
     setTimeout(function(){
         $('#questionBg').removeClass('questAnimate');
         console.log("removing working")
     },17000);
-
-    // removeClass();
-
 }
 function removeClass(){
-    let questBox = document.getElementById('questionBg');
-    questBox.classList.remove('questAnimate');
-    console.log("removing")
+
 }
 document.querySelector('#start100Btn').addEventListener('click', move)
 document.querySelector('#start200Btn').addEventListener('click', move)
@@ -57,7 +59,7 @@ let questionDb = {
         //index 0, question set 1
         {
         //named show1 or 2 to make questions display first due to order
-        show1Q: "English Slang for 'Hey'",
+        show1Q: "English Slang for Hello",
         show2A:["Question set 1", "Yo", "Good Day kind Sir", "Top of the Morning Govenar"],
         points: 100
         },

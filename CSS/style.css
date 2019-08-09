@@ -66,6 +66,11 @@ body{
     width: 100%;
 }
 
+.hideBtn{
+    /* applies when buttons are clicked on main.js, near line 20 */
+    display: none;
+}
+
 .subRows{
     width:25%;
     border: solid;
@@ -76,9 +81,14 @@ body{
     justify-content: center;
 }
 
+.row1a1{
+    font-size: 20px;
+    
+}
 .row1b1{
     border: solid black;
     background-color: orange;
+    
 }
 
 /* End of Row 1 styling */
@@ -114,6 +124,21 @@ body{
     background-size: cover;
     background-position: center; 
 }
+
+    .questionTopRow{
+        /* declared in main.js, near line 20 */
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+    }
+
+    .choiceBtn{
+        /* declared in main.js, near line 28 */
+        width: 100%;
+    }
+
 
 /* Animating Class */
 .questAnimate{
