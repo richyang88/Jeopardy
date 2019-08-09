@@ -15,8 +15,8 @@ function move(event){
     console.log("working");
     questBox.classList.add('questAnimate');
     let choice1=document.createElement('button');
-    choice1.innerHTML= "Buttonz";
-
+    let choiceBtn = choice1.innerHTML= "Buttonz";
+    questBox.appendChild(choice1);
 
 
 
