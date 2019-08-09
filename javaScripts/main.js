@@ -8,6 +8,7 @@
 // // document.querySelector('.row3').appendChild(newDivs);
 // }
 
+//Buttons to start the row, making questions appear
 function move(event){
     let questBox = document.getElementById('questionBg');
     questBox.style.display ="block";
@@ -16,7 +17,7 @@ function move(event){
     setTimeout(function(){
         $('#questionBg').removeClass('questAnimate');
         console.log("removing working")
-    },4000);
+    },22000);
 
     // removeClass();
 

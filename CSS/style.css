@@ -105,7 +105,7 @@ body{
     border: solid;
     background-color: white;
     
-    transform: translate(-2000px,0px);
+    /* transform: translate(-2000px,0px);  To be Done when Finalized*/
     position: absolute;
     /* display:none; */
     z-index: 1000;
@@ -115,7 +115,7 @@ body{
 }
 
 .questAnimate{
-    animation: questionFrame 10s;
+    animation: questionFrame 20s;
 }
 
 @keyframes questionFrame {
