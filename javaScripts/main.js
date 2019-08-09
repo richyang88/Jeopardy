@@ -46,9 +46,7 @@ function move(event){
         console.log("removing working")
     },17000);
 }
-function removeClass(){
 
-}
 document.querySelector('#start100Btn').addEventListener('click', move)
 document.querySelector('#start200Btn').addEventListener('click', move)
 document.querySelector('#start300Btn').addEventListener('click', move)
@@ -59,20 +57,37 @@ let questionDb = {
     row1hi1Q:[
         //index 0, question set 1
         {
-        //named show1 or 2 to make questions display first due to order
-        show1Q: "English Slang for Hello",
-        show2A:["Question set 1", "Yo", "Good Day kind Sir", "Top of the Morning Govenar"],
-        points: 100
+            //named show1 or 2 to make questions display first due to order
+            show1Q: "English Slang for Hello",
+            show2A:["What is GoodBye", "What is Yo", "What is Good Day kind Sir", "What is Top of the Morning Govenar"],
+            points: 100
         },
-        //index 1, question set 2
+        
         {
+            //index 1, question set 2
             show1Q: "Question 2",
             show2A:["Answer set 2"]
         },
         {
+            //index 2, question set 3
             show1Q: "Question 3",
             show2Q:["Answer set 3"]
-        }] // end of r1 hello Questions
+        }], // end of r1 hello Questions
+    row1BadgerQ:[
+        {
+            show1Q:"Badger Row 1 Question 1",
+            show2A:['Answer A','Answer B','Answer C','Answer D']
+        },
+        {
+            show1Q:"Badger Row 1 Question 2",
+            show2A:['Answer A','Answer B','Answer C','Answer D']
+        },
+        {
+            show1Q:"Badger Row 1 Question 3",
+            show2A:['Answer A','Answer B','Answer C','Answer D']
+        },
+
+    ]
 
 }
 
