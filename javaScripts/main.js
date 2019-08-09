@@ -12,10 +12,13 @@
 function move(event){
     let questBox = document.getElementById('questionBg');
     console.log("working");
+    //questAnimate = class who's only purpose is to animate div attach to
+    //can be found first on CSS/style.css line 119
     questBox.classList.add('questAnimate');
 
 
     let question = document.createElement("div");
+    question.className('questionTopRow')
     let questionShow= question.innerHTML = questionDb.row1hi1Q[0].show1Q;
     questBox.appendChild(question);
 

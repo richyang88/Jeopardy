@@ -95,6 +95,7 @@ body{
     display:flex;
     width: 100%;
 }
+/* End of Row 3 styling */
 
 /* Start styling Questions */
 .questions{
@@ -114,6 +115,7 @@ body{
     background-position: center; 
 }
 
+/* Animating Class */
 .questAnimate{
     animation: questionFrame 15s;
 }
