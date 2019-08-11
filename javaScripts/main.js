@@ -73,7 +73,7 @@ function row1Start(event){
     let questionShow= question.innerHTML = questionDb.row1hi1Q[rando].show1Q;
     questBox.appendChild(question);
 
-    //append answerBg to quetionBg div on index.html line 86
+    //append answerBg to quetionBg div on index.html line 62
     questBox.appendChild(answerBg);
 
     //for loop to pull from Questions Database
@@ -100,6 +100,7 @@ function row1Start(event){
                 // $('#questionBg').removeClass('questAnimate');
             }else{
                 console.log('wrong');
+                // go to wrong answer function
                 return;
             }
         }
@@ -114,7 +115,6 @@ function row1Start(event){
 }
 
 document.querySelector('#start100Btn').addEventListener('click', row1Start)
-// document.querySelector('#start200Btn').addEventListener('click', row1Q3)
 // document.querySelector('#start300Btn').addEventListener('click', move)
 
 
