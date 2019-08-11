@@ -73,14 +73,25 @@ function row1Start(event){
     let questionShow= question.innerHTML = questionDb.row1hi1Q[rando].show1Q;
     questBox.appendChild(question);
 
+    //adding timer
+    let timeDiv= document.createElement('div');
+    let seconds= 60;
+    question.appendChild(timeDiv);
+    let timer = setInterval(function(){
+        timeDiv.innerHTML = "Time on the Clock: "+seconds+" seconds";
+        seconds--;
+    },1000)
+
+
+
     //append answerBg to quetionBg div on index.html line 62
     questBox.appendChild(answerBg);
 
-    //after 17 seconds remove class using Jquery
+    //after 61 seconds remove class using Jquery
     let redoAnimation = setTimeout(function(){
         $('#questionBg').removeClass('questAnimate');
         console.log("removing working")
-    },17000);
+    },61000);
 
     //for loop to pull from Questions Database
     for(let i=0; i<questionDb.row1hi1Q[rando].show2A.length; i++){
@@ -140,6 +151,16 @@ function row1Q2(event){
     question.className='questionTopRow';
     let questionShow= question.innerHTML = questionDb.row1BadgerQ[0].show1Q;
     questBox.appendChild(question);
+
+    //adding timer
+    let timeDiv= document.createElement('div');
+    let seconds= 60;
+    question.appendChild(timeDiv);
+    let timer = setInterval(function(){
+        timeDiv.innerHTML = "Time on the Clock: "+seconds+" seconds";
+        seconds--;
+    },1000)
+
 
     //after 17 seconds remove animation class using Jquery
     let redoAnimation = setTimeout(function(){
