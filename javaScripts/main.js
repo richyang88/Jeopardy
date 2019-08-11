@@ -1,3 +1,6 @@
+let playerScore=0;
+let computerScore=0;
+
 //Questions Obj
 let questionDb = {
     //row 1, column hello questions
@@ -45,7 +48,7 @@ let questionDb = {
 
 
 // Buttons to start the row, making questions appear
-function move(event){
+function row1Start(event){
     let questBox = document.getElementById('questionBg');
     let answerBg = document.createElement('div');
     answerBg.id="answerBgId";
@@ -92,7 +95,7 @@ function move(event){
                 questBox.removeChild(answerBg);
                 
                 // choice1.removeChild('button');
-                question2();
+                row1Q2();
                 // $('#questionBg').removeClass('questAnimate');
             }else{
                 console.log('wrong');
@@ -109,7 +112,7 @@ function move(event){
     },17000);
 }
 
-document.querySelector('#start100Btn').addEventListener('click', move)
+document.querySelector('#start100Btn').addEventListener('click', row1Start)
 document.querySelector('#start200Btn').addEventListener('click', move)
 document.querySelector('#start300Btn').addEventListener('click', move)
 
@@ -117,7 +120,7 @@ document.querySelector('#start300Btn').addEventListener('click', move)
 // question2();
 
 // Buttons to start the row, making questions appear
-function question2(event){
+function row1Q2(event){
     let questBox = document.getElementById('questionBg');
     let answerBg = document.createElement('div');
     answerBg.id="answerBgId";
@@ -127,13 +130,6 @@ function question2(event){
     //questAnimate = class who's only purpose is to animate div attach to
     //can be found first on CSS/style.css line 119
     questBox.classList.add('questAnimate');
-
-    // Add hide class to buttons, seen on style.css line 69
-    // document.getElementById('start100Btn').classList.add('hideBtn');
-    // document.getElementById('row1a1').innerHTML="You Started Here";
-    // document.getElementById('row1a1').classList.add('row1b1');
-    // document.getElementById('start200Btn').classList.add('hideBtn');
-    // document.getElementById('start300Btn').classList.add('hideBtn');
 
     //create div to add to #questionBg
     let question = document.createElement("div");
@@ -164,7 +160,7 @@ function question2(event){
                 questBox.removeChild(answerBg);
                 
                 // choice1.removeChild('button');
-                question2();
+                row1Q3();
                 // $('#questionBg').removeClass('questAnimate');
             }else{
                 console.log('wrong');
