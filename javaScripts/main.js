@@ -76,6 +76,12 @@ function row1Start(event){
     //append answerBg to quetionBg div on index.html line 62
     questBox.appendChild(answerBg);
 
+    //after 17 seconds remove class using Jquery
+    let redoAnimation = setTimeout(function(){
+        $('#questionBg').removeClass('questAnimate');
+        console.log("removing working")
+    },17000);
+
     //for loop to pull from Questions Database
     for(let i=0; i<questionDb.row1hi1Q[rando].show2A.length; i++){
         let choice1=document.createElement('button');
@@ -95,9 +101,8 @@ function row1Start(event){
                 questBox.removeChild(answerBg);
                 userScore+=100;
                 document.getElementById('userScoreSpan').innerText = userScore;
-                // choice1.removeChild('button');
+                clearTimeout(redoAnimation)
                 row1Q2();
-                // $('#questionBg').removeClass('questAnimate');
             }else{
                 console.log('wrong');
                 // go to wrong answer function
@@ -107,11 +112,7 @@ function row1Start(event){
         
     }
 
-    //after 17 seconds remove class using Jquery
-    setTimeout(function(){
-        $('#questionBg').removeClass('questAnimate');
-        console.log("removing working")
-    },17000);
+
 }
 
 document.querySelector('#start100Btn').addEventListener('click', row1Start)
@@ -139,6 +140,12 @@ function row1Q2(event){
     let questionShow= question.innerHTML = questionDb.row1BadgerQ[0].show1Q;
     questBox.appendChild(question);
 
+    //after 17 seconds remove animation class using Jquery
+    let redoAnimation = setTimeout(function(){
+        $('#questionBg').removeClass('questAnimate');
+        console.log("removing working")
+    },17000);
+
     //append answerBg to quetionBg div on index.html line 86
     questBox.appendChild(answerBg);
 
@@ -161,9 +168,8 @@ function row1Q2(event){
                 questBox.removeChild(answerBg);
                 userScore+=100;
                 document.getElementById('userScoreSpan').innerText = userScore;
-                // choice1.removeChild('button');
+                clearTimeout(redoAnimation)
                 row1Q3();
-                // $('#questionBg').removeClass('questAnimate');
             }else{
                 console.log('wrong');
                 return;
@@ -171,12 +177,6 @@ function row1Q2(event){
         }
         
     }
-
-    //after 17 seconds remove class using Jquery
-    setTimeout(function(){
-        $('#questionBg').removeClass('questAnimate');
-        console.log("removing working")
-    },17000);
 }
 
 // row 1 question 3();
@@ -199,6 +199,12 @@ function row1Q3(event){
     question.className='questionTopRow';
     let questionShow= question.innerHTML = questionDb.row1MushQ[0].show1Q;
     questBox.appendChild(question);
+    
+    //after 17 seconds remove animation class using Jquery
+    let redoAnimation = setTimeout(function(){
+        $('#questionBg').removeClass('questAnimate');
+        console.log("removing working")
+    },17000);
 
     //append answerBg to quetionBg div on index.html line 86
     questBox.appendChild(answerBg);
@@ -222,7 +228,7 @@ function row1Q3(event){
                 questBox.removeChild(answerBg);
                 userScore+=100;
                 document.getElementById('userScoreSpan').innerText = userScore;
-                // choice1.removeChild('button');
+                clearTimeout(redoAnimation)
                 row1Q3();
                 // $('#questionBg').removeClass('questAnimate');
             }else{
@@ -232,12 +238,6 @@ function row1Q3(event){
         }
         
     }
-
-    //after 17 seconds remove class using Jquery
-    setTimeout(function(){
-        $('#questionBg').removeClass('questAnimate');
-        console.log("removing working")
-    },17000);
 }
 
 

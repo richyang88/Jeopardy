@@ -26,6 +26,12 @@ function row2Start(event){
     let questionShow= question.innerHTML = questionDb.row1hi1Q[rando].show1Q;
     questBox.appendChild(question);
 
+    //after 17 seconds remove animation class using Jquery
+    let redoAnimation = setTimeout(function(){
+        $('#questionBg').removeClass('questAnimate');
+        console.log("removing working")
+    },17000);
+
     //append answerBg to quetionBg div on index.html line 86
     questBox.appendChild(answerBg);
 
@@ -48,21 +54,14 @@ function row2Start(event){
                 questBox.removeChild(answerBg);
                 userScore+=100;
                 document.getElementById('userScoreSpan').innerText = userScore;
-                // choice1.removeChild('button');
+                clearTimeout(redoAnimation);
                 row1Q2();
-                // $('#questionBg').removeClass('questAnimate');
             }else{
                 console.log('wrong');
                 return;
             }
         }
     }
-
-    //after 17 seconds remove class using Jquery
-    setTimeout(function(){
-        $('#questionBg').removeClass('questAnimate');
-        console.log("removing working")
-    },17000);
 }
 
 document.querySelector('#start200Btn').addEventListener('click', row2Start)
