@@ -1,4 +1,4 @@
-let playerScore=0;
+let userScore=0;
 let computerScore=0;
 
 //Questions Obj
@@ -93,7 +93,8 @@ function row1Start(event){
                 console.log('Right');
                 questBox.removeChild(question);
                 questBox.removeChild(answerBg);
-                
+                userScore+=100;
+                document.getElementById('userScoreSpan').innerText = userScore;
                 // choice1.removeChild('button');
                 row1Q2();
                 // $('#questionBg').removeClass('questAnimate');
@@ -113,8 +114,8 @@ function row1Start(event){
 }
 
 document.querySelector('#start100Btn').addEventListener('click', row1Start)
-document.querySelector('#start200Btn').addEventListener('click', move)
-document.querySelector('#start300Btn').addEventListener('click', move)
+// document.querySelector('#start200Btn').addEventListener('click', move)
+// document.querySelector('#start300Btn').addEventListener('click', move)
 
 
 // question2();
@@ -158,7 +159,8 @@ function row1Q2(event){
                 console.log('Right');
                 questBox.removeChild(question);
                 questBox.removeChild(answerBg);
-                
+                userScore+=100;
+                document.getElementById('userScoreSpan').innerText = userScore;
                 // choice1.removeChild('button');
                 row1Q3();
                 // $('#questionBg').removeClass('questAnimate');
