@@ -42,7 +42,7 @@ let questionDb = {
                 show1Q:"Mushroom Row 1 Question 1",
                 show2A:['Q3 Answer A','Q3 Answer B','Q3 Answer C','Q3 Answer D']
             }],//end of r1 Mushroom
-
+        
 }
 
 
@@ -93,25 +93,26 @@ function row1Start(event){
 
         //event listener for choices 
         choice1.addEventListener('click', check)
-
-        function check(event){
-            if(event.target.id=='option1'){
-                console.log('Right');
-                questBox.removeChild(question);
-                questBox.removeChild(answerBg);
-                userScore+=100;
-                document.getElementById('userScoreSpan').innerText = userScore;
-                clearTimeout(redoAnimation)
-                row1Q2();
-            }else{
-                console.log('wrong');
-                // go to wrong answer function
-                return;
-            }
-        }
         
     }
-
+    function check(event){
+        if(event.target.id=='option1'){
+            console.log('Right');
+            questBox.removeChild(question);
+            questBox.removeChild(answerBg);
+            userScore+=100;
+            document.getElementById('userScoreSpan').innerText = userScore;
+            console.log(redoAnimation);
+            //not working here
+            clearTimeout(redoAnimation, console.log('stop time out'))
+            console.log(redoAnimation);
+            row1Q2();
+        }else{
+            console.log('wrong');
+            // go to wrong answer function
+            return;
+        }
+    }
 
 }
 

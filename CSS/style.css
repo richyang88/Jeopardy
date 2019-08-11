@@ -151,7 +151,7 @@ body{
 
 /* Animating Class */
 .questAnimate{
-    animation: questionFrame 15s;
+    animation: questionFrame 60s;
 }
 
 @keyframes questionFrame {
