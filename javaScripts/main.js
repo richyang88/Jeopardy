@@ -64,13 +64,15 @@ let questionDb = {
         }],
     row2MushQ:[
         {
-            show1Q:"Hellow Questions 2",
-            show2A:['r2 Hi A','r2 Hi B','r2 Hi C','r2 Hi D']
+            show1Q:"Mushrooms are made up of this % of water",
+            show2A:['50%','60%','80%','90%'],
+            show3A:"90%"
         }],
     row2SnakeQ:[
         {
-            show1Q:"Hellow Questions 2",
-            show2A:['r2 Hi A','r2 Hi B','r2 Hi C','r2 Hi D']
+            show1Q:"This type of snake is also a programming language",
+            show2A:['Boa','Mamba','Cobra','Python'],
+            show3A:"Python"
         }],
         // Start of row 3 Questions
         row3hiQ:[
@@ -87,13 +89,15 @@ let questionDb = {
         }],
     row3MushQ:[
         {
-            show1Q:"Hellow Questions 2",
-            show2A:['r2 Hi A','r2 Hi B','r2 Hi C','r2 Hi D']
+            show1Q:"How old is the largest mushroom? ",
+            show2A:['50 years','10 years','220 years','over 2,400 years'],
+            show3A:"over 2,400 years"
         }],
     row3SnakeQ:[
         {
-            show1Q:"Hellow Questions 2",
-            show2A:['r2 Hi A','r2 Hi B','r2 Hi C','r2 Hi D']
+            show1Q:"The Middle Child of Loki and Angrboða",
+            show2A:['Jörmungandr','Fenrir','Hel','Svaðilfari'],
+            show3A:"Jörmungandr"
         }]
 }
 
