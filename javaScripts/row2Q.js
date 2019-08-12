@@ -36,7 +36,8 @@ function row2Start(event){
 
     //after 17 seconds remove animation class using Jquery
     let redoAnimation = setTimeout(function(){
-        $('#questionBg').removeClass('questAnimate');
+        finish();
+        questBox.classList.remove('questAnimate');
         console.log("removing working")
     },17000);
 
@@ -175,6 +176,7 @@ function row2Q3(event){
 
     //after 17 seconds remove animation class using Jquery
     let redoAnimation = setTimeout(function(){
+        finish();
         questBox.classList.remove('questAnimate');
         console.log("removing working")
     },17000);
@@ -245,6 +247,7 @@ function row2Q4(event){
 
     //after 17 seconds remove animation class using Jquery
     let redoAnimation = setTimeout(function(){
+        finish();
         questBox.classList.remove('questAnimate');
         console.log("removing working")
     },17000);

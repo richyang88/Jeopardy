@@ -144,7 +144,8 @@ function row1Start(event){
 
     //after 17 seconds remove class using Jquery
     let redoAnimation = setTimeout(function(){
-        questBox.classList.remove('questAnimate');
+        finish();
+        // questBox.classList.remove('questAnimate');
         console.log("removing working")
     },17000);
 
@@ -172,6 +173,7 @@ function row1Start(event){
             //Stops the 17seoncd class remove so next question will have full time
             clearTimeout(redoAnimation, console.log('stop time out'))
             console.log(redoAnimation);
+            document.getElementById('row1a1').style.backgroundImage("url('../images/snakeHappy/jpeg')")
             row1Q2();
         }else{
             // go to wrong answer function
@@ -214,7 +216,9 @@ function row1Q2(event){
 
     //after 17 seconds remove animation class 
     let redoAnimation = setTimeout(function(){
+        finish();
         questBox.classList.remove('questAnimate');
+        
         console.log("removing working")
     },17000);
 
@@ -283,6 +287,7 @@ function row1Q3(event){
 
     //after 17 seconds remove animation class using Jquery
     let redoAnimation = setTimeout(function(){
+        finish();
         questBox.classList.remove('questAnimate');
         console.log("removing working")
     },17000);
@@ -353,6 +358,7 @@ function row1Q4(event){
 
     //after 17 seconds remove animation class using Jquery
     let redoAnimation = setTimeout(function(){
+        finish();
         questBox.classList.remove('questAnimate');
         console.log("removing working")
     },17000);
