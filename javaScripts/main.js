@@ -173,10 +173,11 @@ function row1Start(event){
             //Stops the 17seoncd class remove so next question will have full time
             clearTimeout(redoAnimation, console.log('stop time out'))
             console.log(redoAnimation);
-            // document.getElementById('row1b1').style.backgroundImage("url('../images/snakeHappy.jpeg')")
+            document.getElementById('row1b1').style.backgroundImage = "url('images/snakeHappy.jpeg')"
             row1Q2();
         }else{
             // go to wrong answer function
+            document.getElementById('row1b1').style.backgroundImage = "url('images/snakeWrong.jpg')"
             finish();
         }
     }
@@ -246,9 +247,10 @@ function row1Q2(event){
                 document.getElementById('userScoreSpan').innerText = userScore;
                 // stops redo animation from exiting window
                 clearTimeout(redoAnimation);
+                document.getElementById('row1c1').style.backgroundImage = "url('images/snakeHappy.jpeg')"
                 row1Q3();
             }else{
-                console.log('wrong');
+                document.getElementById('row1c1').style.backgroundImage = "url('images/snakeWrong.jpg')"
                 finish();
             }
         }
@@ -316,10 +318,11 @@ function row1Q3(event){
                 document.getElementById('userScoreSpan').innerText = userScore;
                 // stops redo animation from exiting window
                 clearTimeout(redoAnimation);
+                document.getElementById('row1d1').style.backgroundImage = "url('images/snakeHappy.jpeg')"
                 row1Q4();
-                // $('#questionBg').removeClass('questAnimate');
+                
             }else{
-                console.log('wrong');
+                document.getElementById('row1d1').style.backgroundImage = "url('images/snakeWrong.jpg')"
                 finish();
             }
         }
@@ -386,9 +389,10 @@ function row1Q4(event){
                 userScore+=100;
                 document.getElementById('userScoreSpan').innerText = userScore;
                 clearTimeout(redoAnimation);
+                document.getElementById('row1e1').style.backgroundImage = "url('images/snakeHappy.jpeg')"
                 finish();
             }else{
-                console.log('wrong');
+                document.getElementById('row1e1').style.backgroundImage = "url('images/snakeWrong.jpg')"
                 finish()
             }
         }
@@ -407,13 +411,14 @@ function finish(event){
     if(userScore>computerScore){
         console.log('You win')
         questBox.innerHTML ="You: "+userScore+" vs Computer: "+computerScore+" You Win";
-        questBox.style.backgroundImage = ("url('../images/snakeHappy.jpeg')");
+        questBox.style.backgroundImage = "url('images/snakeHappy.jpeg')";
     }else if(userScore===computerScore){
         questBox.innerHTML ="You: "+userScore+" vs Computer: "+computerScore+" You Tie";
-        // questBox.style.backgroundImage = ("url('../images/snakeHappy.jpeg')");
+        questBox.style.backgroundImage = "url('images/snakeHappy.jpeg')";
     }else{
         questBox.innerHTML ="You: "+userScore+" vs Computer: "+computerScore+" Computer Win";
-        questBox.style.backgroundImage = ("url('jeopardy/images/snakeWrong.jpg')")
+        questBox.style.backgroundImage = "url('/jeopardy/images/snakeWrong.jpg')"
+        // document.getElementById('row1b1').style.backgroundImage = "url('images/snakeWrong.jpg')"
     }
 
 }

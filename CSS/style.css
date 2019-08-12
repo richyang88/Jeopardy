@@ -37,21 +37,29 @@ body{
 .rowBg{
     height: 94%;
     border: solid;
+    background-image: url("../images/grass.png");
+    background-position: center;
+    background-size: cover;
 }
 .rows{
     height: 24%;
     width: 16%;
     border: solid black;
-    background: red;
+    /* background: red; */
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
     text-align: center;
+}
+#row1b1{
+    background-repeat: no-repeat;
 }
 /* End of Generic row Styling */
 /* start styling category section */
 .rowCategories{
     display:flex;
     width: 100%;
-    color: white;
-    
+    color: white;  
 }
 
 .subCat{
@@ -63,7 +71,7 @@ body{
 /* Start Styling for Question of Rows */
 .row1{
     display:flex;
-    background: green;
+    /* background: green; */
     width: 100%;
 }
 
@@ -76,6 +84,8 @@ body{
     width:25%;
     border: solid;
     background-color: grey;
+    background-position: center;
+    background-size: 70%;
     z-index: 10;
     display: flex;
     align-items: center;
@@ -88,7 +98,7 @@ body{
 }
 .row1b1{
     border: solid black;
-    background-color: orange;
+    /* background-color: orange; */
     
 }
 
@@ -97,7 +107,7 @@ body{
 .row2{
     display:flex;
     width: 100%;
-    background: yellow;
+    /* background: yellow; */
 }
 
 /* End of Row 2 Styling */
@@ -121,7 +131,8 @@ body{
     z-index: 1000;
     background-image: url('../images/snakeHead.png'); 
     /* background-image: url('../images/snakeHappy.jpeg');  */
-    background-size: cover;
+    background-size: auto;
+    background-repeat: no-repeat;
     background-position: center; 
     text-align: center;
     font-size: 30px;

@@ -286,23 +286,23 @@ function row2Q4(event){
 }
 
 //end of game
-function finish(event){
-    let questBox = document.getElementById('questionBg');
-    let randomRow = Math.floor(Math.random()*3)+1;
-    let randomRightAnswers= Math.floor(Math.random()*4)+1;
-    computerScore=randomRow*randomRightAnswers*100; 
-    document.getElementById('computerScoreSpan').innerHTML = computerScore;
+// function finish(event){
+//     let questBox = document.getElementById('questionBg');
+//     let randomRow = Math.floor(Math.random()*3)+1;
+//     let randomRightAnswers= Math.floor(Math.random()*4)+1;
+//     computerScore=randomRow*randomRightAnswers*100; 
+//     document.getElementById('computerScoreSpan').innerHTML = computerScore;
 
-    if(userScore>computerScore){
-        console.log('You win')
-        questBox.innerHTML ="You: "+userScore+" vs Computer: "+computerScore+" You Win";
-        questBox.style.backgroundImage = ("url('../images/snakeHappy.jpeg')");
-    }else if(userScore===computerScore){
-        questBox.innerHTML ="You: "+userScore+" vs Computer: "+computerScore+" You Tie";
-        // questBox.style.backgroundImage = ("url('../images/snakeHappy.jpeg')");
-    }else{
-        questBox.innerHTML ="You: "+userScore+" vs Computer: "+computerScore+" Computer Win";
-        questBox.style.backgroundImage = ("url('../images/snakeWrong.jpg')")
-    }
+//     if(userScore>computerScore){
+//         console.log('You win')
+//         questBox.innerHTML ="You: "+userScore+" vs Computer: "+computerScore+" You Win";
+//         questBox.style.backgroundImage = ("url('images/snakeHappy.jpeg')");
+//     }else if(userScore===computerScore){
+//         questBox.innerHTML ="You: "+userScore+" vs Computer: "+computerScore+" You Tie";
+//         questBox.style.backgroundImage = ("url('images/snakeHappy.jpeg')");
+//     }else{
+//         questBox.innerHTML ="You: "+userScore+" vs Computer: "+computerScore+" Computer Win";
+//         questBox.style.backgroundImage = ("url('images/snakeWrong.jpg')")
+//     }
 
 }
