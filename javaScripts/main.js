@@ -12,7 +12,6 @@ let questionDb = {
             show2A:["GoodBye", "Yo", "Good Day kind Sir", "Top of the Morning Govenar"],
             show3A:"Yo",
         },
-        
         {
             //index 1, question set 2
             show1Q: "Question 2",
@@ -38,71 +37,64 @@ let questionDb = {
             show1Q:"Badger Row 1 Question 3",
             show2A:['Q3 Answer A','Q3 Answer B','Q3 Answer C','Q3 Answer D']
         }],// end r1 badger questions 
-        row1MushQ:[
-            {
-                show1Q:"Mushroom Row 1 Question 1",
-                show2A:['Q3 Answer A','Q3 Answer B','Q3 Answer C','Q3 Answer D']
-            }],//end of r1 Mushroom
-        row1SnakeQ:[
-            {
-                show1Q:"r1 Snake Q",
-                show2A:['r1 snake A','r1 snake B','r1 snake C','r1 snake D']
-            }
-        ],
-            // Start of row 2 Questions
-        row2hiQ:[
-            {
-                show1Q:"How to say Hello in French",
-                show2A:['Howdy','Nyob Zoo','Hola','Bonjour'],
-                show3A:'Bonjour'
-            }
-        ],
-        row2BadgerQ:[
-            {
-                show1Q:"This type of badger is also the name of a super hero",
-                show2A:['Antman','Minkman','Squirrel Girl','Wolverine'],
-                show3A:'Wolverine'
-            }
-        ],
-        row2MushQ:[
-            {
-                show1Q:"Hellow Questions 2",
-                show2A:['r2 Hi A','r2 Hi B','r2 Hi C','r2 Hi D']
-            }
-        ],
-        row2SnakeQ:[
-            {
-                show1Q:"Hellow Questions 2",
-                show2A:['r2 Hi A','r2 Hi B','r2 Hi C','r2 Hi D']
-            }
-        ],
-         // Start of row 3 Questions
-         row3hiQ:[
-            {
-                show1Q:"How to say Good Morning in Japanese",
-                show2A:['Ohayo','Ni Hao','Habari za asubuhi','Konnichiwa'],
-                show3A:'Ohayo'
-            }
-        ],
-        row3BadgerQ:[
-            {
-                show1Q:"This type of badger is also the name of a super hero",
-                show2A:['Antman','Minkman','Squirrel Girl','Wolverine'],
-                show3A:'Wolverine'
-            }
-        ],
-        row3MushQ:[
-            {
-                show1Q:"Hellow Questions 2",
-                show2A:['r2 Hi A','r2 Hi B','r2 Hi C','r2 Hi D']
-            }
-        ],
-        row3SnakeQ:[
-            {
-                show1Q:"Hellow Questions 2",
-                show2A:['r2 Hi A','r2 Hi B','r2 Hi C','r2 Hi D']
-            }
-        ]
+    row1MushQ:[
+        {
+            show1Q:"How many hours of sunlight do mushrooms need per day",
+            show2A:['0 hours','1 hour','8 hours','4 hours'],
+            show3A:'0 hours'
+        }],//end of r1 Mushroom
+    row1SnakeQ:[
+        {
+            show1Q:"Snakes are",
+            show2A:['Herbivores','Carnivores','Vegan','Orange']
+        }],
+
+        // Start of row 2 Questions
+    row2hiQ:[
+        {
+            show1Q:"How to say Hello in French",
+            show2A:['Howdy','Nyob Zoo','Hola','Bonjour'],
+            show3A:'Bonjour'
+        }],
+    row2BadgerQ:[
+        {
+            show1Q:"This type of badger is also the name of a super hero",
+            show2A:['Antman','Minkman','Squirrel Girl','Wolverine'],
+            show3A:'Wolverine'
+        }],
+    row2MushQ:[
+        {
+            show1Q:"Hellow Questions 2",
+            show2A:['r2 Hi A','r2 Hi B','r2 Hi C','r2 Hi D']
+        }],
+    row2SnakeQ:[
+        {
+            show1Q:"Hellow Questions 2",
+            show2A:['r2 Hi A','r2 Hi B','r2 Hi C','r2 Hi D']
+        }],
+        // Start of row 3 Questions
+        row3hiQ:[
+        {
+            show1Q:"How to say Good Morning in Japanese",
+            show2A:['Ohayo','Ni Hao','Habari za asubuhi','Konnichiwa'],
+            show3A:'Ohayo'
+        }],
+    row3BadgerQ:[
+        {
+            show1Q:"Which State in the US has a badger as their state animal",
+            show2A:['Montana','Wisconsin','Maine','Arkansas'],
+            show3A:'Wisconsin'
+        }],
+    row3MushQ:[
+        {
+            show1Q:"Hellow Questions 2",
+            show2A:['r2 Hi A','r2 Hi B','r2 Hi C','r2 Hi D']
+        }],
+    row3SnakeQ:[
+        {
+            show1Q:"Hellow Questions 2",
+            show2A:['r2 Hi A','r2 Hi B','r2 Hi C','r2 Hi D']
+        }]
 }
 
 
