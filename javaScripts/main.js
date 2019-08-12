@@ -9,15 +9,15 @@ let questionDb = {
         {
             //named show1 or 2 to make questions display first due to order
             show1Q: "English Slang for Hello",
-            show2A:["What is GoodBye", "What is Yo", "What is Good Day kind Sir", "What is Top of the Morning Govenar"],
-            show3A:"What is Yo",
-            points: 100
+            show2A:["GoodBye", "Yo", "Good Day kind Sir", "Top of the Morning Govenar"],
+            show3A:"Yo",
         },
         
         {
             //index 1, question set 2
             show1Q: "Question 2",
-            show2A:[" Q2 Answer A","Q2 Answer B","Q2 Answer set C","Q2 Answer set D"]
+            show2A:[" Q2 Answer A","Q2 Answer B","Q2 Answer set C","Q2 Answer set D"],
+            show3A:"Answer"
         },
         {
             //index 2, question set 3
@@ -26,8 +26,9 @@ let questionDb = {
         }], // end of r1 hello Questions
     row1BadgerQ:[
         {
-            show1Q:"Badger Row 1 Question 1",
-            show2A:['Q1 Answer A','Q1 Answer B','Q1 Answer C','Q1 Answer D']
+            show1Q:"The type of Badger is known not to care about bee stings",
+            show2A:['Weasle','Wasp Badger','Honey Badger','Ferret'],
+            show3A:"Honey Badger"
         },
         {
             show1Q:"Badger Row 1 Question 2",
@@ -51,14 +52,16 @@ let questionDb = {
             // Start of row 2 Questions
         row2hiQ:[
             {
-                show1Q:"Hellow Questions 2",
-                show2A:['r2 Hi A','r2 Hi B','r2 Hi C','r2 Hi D']
+                show1Q:"How to say Hello in French",
+                show2A:['Howdy','Ni Hao','Hola','Bonjour'],
+                show3A:'Bonjour'
             }
         ],
         row2BadgerQ:[
             {
-                show1Q:"Hellow Questions 2",
-                show2A:['r2 Hi A','r2 Hi B','r2 Hi C','r2 Hi D']
+                show1Q:"This type of badger is also the name of a super hero",
+                show2A:['Antman','Minkman','Squirrel Girl','Wolverine'],
+                show3A:'Wolverine'
             }
         ],
         row2MushQ:[
@@ -73,6 +76,33 @@ let questionDb = {
                 show2A:['r2 Hi A','r2 Hi B','r2 Hi C','r2 Hi D']
             }
         ],
+         // Start of row 3 Questions
+         row3hiQ:[
+            {
+                show1Q:"How to say Hello in French",
+                show2A:['Howdy','Ni Hao','Hola','Bonjour'],
+                show3A:'Bonjour'
+            }
+        ],
+        row3BadgerQ:[
+            {
+                show1Q:"This type of badger is also the name of a super hero",
+                show2A:['Antman','Minkman','Squirrel Girl','Wolverine'],
+                show3A:'Wolverine'
+            }
+        ],
+        row3MushQ:[
+            {
+                show1Q:"Hellow Questions 2",
+                show2A:['r2 Hi A','r2 Hi B','r2 Hi C','r2 Hi D']
+            }
+        ],
+        row3SnakeQ:[
+            {
+                show1Q:"Hellow Questions 2",
+                show2A:['r2 Hi A','r2 Hi B','r2 Hi C','r2 Hi D']
+            }
+        ]
 }
 
 
@@ -83,7 +113,7 @@ function row1Start(event){
     let answerBg = document.createElement('div');
     answerBg.id="answerBgId";
     
-    let rando= Math.floor(Math.random()*3);
+    // let rando= Math.floor(Math.random()*3);
     console.log("working");
     //questAnimate = class who's only purpose is to animate div attach to
     //can be found first on CSS/style.css line 119
@@ -100,7 +130,7 @@ function row1Start(event){
     let question = document.createElement("div");
     //top row found on style.css near line 128
     question.className='questionTopRow';
-    let questionShow= question.innerHTML = questionDb.row1hi1Q[rando].show1Q;
+    let questionShow= question.innerHTML = questionDb.row1hi1Q[0].show1Q;
     questBox.appendChild(question);
 
     //adding timer
@@ -124,12 +154,12 @@ function row1Start(event){
     },17000);
 
     //for loop to pull from Questions Database
-    for(let i=0; i<questionDb.row1hi1Q[rando].show2A.length; i++){
+    for(let i=0; i<questionDb.row1hi1Q[0].show2A.length; i++){
         let choice1=document.createElement('button');
         choice1.className = "choiceBtn option"+[i];
         choice1.id = "option"+[i];
         console.log(choice1.id);
-        let choiceBtn = choice1.innerHTML = (i+1) + ") " + questionDb.row1hi1Q[rando].show2A[i];
+        let choiceBtn = choice1.innerHTML = (i+1) + ") " + questionDb.row1hi1Q[0].show2A[i];
         answerBg.appendChild(choice1);
 
         //event listener for choices 
