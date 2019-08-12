@@ -400,11 +400,14 @@ function finish(event){
 
     if(userScore>computerScore){
         console.log('You win')
-        questBox.innerHTML ="You Win";
+        questBox.innerHTML ="You: "+userScore+" vs Computer: "+computerScore+" You Win";
+        questBox.style.backgroundImage = ("url('../images/snakeHappy.jpeg')");
     }else if(userScore===computerScore){
-        questBox.innerHTML ="You Tie";
+        questBox.innerHTML ="You: "+userScore+" vs Computer: "+computerScore+" You Tie";
+        // questBox.style.backgroundImage = ("url('../images/snakeHappy.jpeg')");
     }else{
-        questBox.innerHTML ="Computer Wins";
+        questBox.innerHTML ="You: "+userScore+" vs Computer: "+computerScore+" Computer Win";
+        questBox.style.backgroundImage = ("url('../images/snakeWrong.jpg')")
     }
 
 }
