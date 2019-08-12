@@ -173,7 +173,7 @@ function row1Start(event){
             //Stops the 17seoncd class remove so next question will have full time
             clearTimeout(redoAnimation, console.log('stop time out'))
             console.log(redoAnimation);
-            // document.getElementById('row1a1').style.backgroundImage("url('../images/snakeHappy.jpeg')")
+            // document.getElementById('row1b1').style.backgroundImage("url('../images/snakeHappy.jpeg')")
             row1Q2();
         }else{
             // go to wrong answer function
@@ -413,7 +413,7 @@ function finish(event){
         // questBox.style.backgroundImage = ("url('../images/snakeHappy.jpeg')");
     }else{
         questBox.innerHTML ="You: "+userScore+" vs Computer: "+computerScore+" Computer Win";
-        questBox.style.backgroundImage = ("url('../images/snakeWrong.jpg')")
+        questBox.style.backgroundImage = ("url('jeopardy/images/snakeWrong.jpg')")
     }
 
 }
