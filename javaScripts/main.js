@@ -42,7 +42,37 @@ let questionDb = {
                 show1Q:"Mushroom Row 1 Question 1",
                 show2A:['Q3 Answer A','Q3 Answer B','Q3 Answer C','Q3 Answer D']
             }],//end of r1 Mushroom
-        
+        row1SnakeQ:[
+            {
+                show1Q:"r1 Snake Q",
+                show2A:['r1 snake A','r1 snake B','r1 snake C','r1 snake D']
+            }
+        ],
+            // Start of row 2 Questions
+        row2hiQ:[
+            {
+                show1Q:"Hellow Questions 2",
+                show2A:['r2 Hi A','r2 Hi B','r2 Hi C','r2 Hi D']
+            }
+        ],
+        row2BadgerQ:[
+            {
+                show1Q:"Hellow Questions 2",
+                show2A:['r2 Hi A','r2 Hi B','r2 Hi C','r2 Hi D']
+            }
+        ],
+        row2MushQ:[
+            {
+                show1Q:"Hellow Questions 2",
+                show2A:['r2 Hi A','r2 Hi B','r2 Hi C','r2 Hi D']
+            }
+        ],
+        row2SnakeQ:[
+            {
+                show1Q:"Hellow Questions 2",
+                show2A:['r2 Hi A','r2 Hi B','r2 Hi C','r2 Hi D']
+            }
+        ],
 }
 
 
@@ -203,7 +233,6 @@ function row1Q2(event){
 }
 
 // row 1 question 3();
-
 // Buttons to start the row, making questions appear
 function row1Q3(event){
     let questBox = document.getElementById('questionBg');
@@ -273,7 +302,75 @@ function row1Q3(event){
     }
 }
 
+// row 1 question 3();
+// Buttons to start the row, making questions appear
+function row1Q4(event){
+    let questBox = document.getElementById('questionBg');
+    let answerBg = document.createElement('div');
+    answerBg.id="answerBgId";
+    
+    // let rando= Math.floor(Math.random()*3);
+    console.log("working");
+    //questAnimate = class who's only purpose is to animate div attach to
+    //can be found first on CSS/style.css line 119
+    questBox.classList.add('questAnimate');
 
+    //create div to add to #questionBg
+    let question = document.createElement("div");
+    //top row found on style.css near line 128
+    question.className='questionTopRow';
+    let questionShow= question.innerHTML = questionDb.row1MushQ[0].show1Q;
+    questBox.appendChild(question);
+    
+    //adding timer
+    let timeDiv= document.createElement('div');
+    let seconds= 15;
+    question.appendChild(timeDiv);
+    let timer = setInterval(function(){
+        timeDiv.innerHTML = "Time on the Clock: "+seconds+" seconds";
+        seconds--;
+    },1000)
+
+    //after 17 seconds remove animation class using Jquery
+    let redoAnimation = setTimeout(function(){
+        questBox.classList.remove('questAnimate');
+        console.log("removing working")
+    },17000);
+
+    //append answerBg to quetionBg div on index.html line 86
+    questBox.appendChild(answerBg);
+
+    //for loop to pull from Questions Database
+    for(let i=0; i<questionDb.row1MushQ[0].show2A.length; i++){
+        let choice1=document.createElement('button');
+        choice1.className = "choiceBtn option"+[i];
+        choice1.id = "option"+[i];
+        console.log(choice1.id);
+        let choiceBtn = choice1.innerHTML = (i+1) + ") " + questionDb.row1MushQ[0].show2A[i];
+        answerBg.appendChild(choice1);
+
+        //event listener for choices 
+        choice1.addEventListener('click', check)
+
+        function check(event){
+            if(event.target.id=='option1'){
+                console.log('Right');
+                questBox.removeChild(question);
+                questBox.removeChild(answerBg);
+                userScore+=100;
+                document.getElementById('userScoreSpan').innerText = userScore;
+                // stops redo animation from exiting window
+                clearTimeout(redoAnimation);
+                row1Q4();
+                // $('#questionBg').removeClass('questAnimate');
+            }else{
+                console.log('wrong');
+                return;
+            }
+        }
+        
+    }
+}
 
 
 

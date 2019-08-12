@@ -6,7 +6,6 @@ function row2Start(event){
     let answerBg = document.createElement('div');
     answerBg.id="answerBgId";
     
-    let rando= Math.floor(Math.random()*3);
     console.log("working");
     //questAnimate = class who's only purpose is to animate div attach to
     //can be found first on CSS/style.css line 119
@@ -23,7 +22,7 @@ function row2Start(event){
     let question = document.createElement("div");
     //top row found on style.css near line 128
     question.className='questionTopRow';
-    let questionShow= question.innerHTML = questionDb.row1hi1Q[rando].show1Q;
+    let questionShow= question.innerHTML = questionDb.row2hiQ[0].show1Q;
     questBox.appendChild(question);
 
     //after 17 seconds remove animation class using Jquery
@@ -36,12 +35,12 @@ function row2Start(event){
     questBox.appendChild(answerBg);
 
     //for loop to pull from Questions Database
-    for(let i=0; i<questionDb.row1hi1Q[rando].show2A.length; i++){
+    for(let i=0; i<questionDb.row2hiQ[0].show2A.length; i++){
         let choice1=document.createElement('button');
         choice1.className = "choiceBtn option"+[i];
         choice1.id = "option"+[i];
         console.log(choice1.id);
-        let choiceBtn = choice1.innerHTML = (i+1) + ") " + questionDb.row1hi1Q[rando].show2A[i];
+        let choiceBtn = choice1.innerHTML = (i+1) + ") " + questionDb.row2hiQ[0].show2A[i];
         answerBg.appendChild(choice1);
 
         //event listener for choices 
@@ -55,7 +54,7 @@ function row2Start(event){
                 userScore+=100;
                 document.getElementById('userScoreSpan').innerText = userScore;
                 clearTimeout(redoAnimation);
-                row1Q2();
+                row2Q2();
             }else{
                 console.log('wrong');
                 return;
