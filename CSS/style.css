@@ -24,6 +24,7 @@ body{
     display:flex;
     justify-content: space-around;
     border: solid;
+    color: lightgreen
 }
 
 .scores{
