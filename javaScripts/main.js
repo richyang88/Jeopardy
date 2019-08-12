@@ -40,13 +40,14 @@ let questionDb = {
     row1MushQ:[
         {
             show1Q:"How many hours of sunlight do mushrooms need per day",
-            show2A:['0 hours','1 hour','8 hours','4 hours'],
+            show2A:['1 hours','0 hour','8 hours','4 hours'],
             show3A:'0 hours'
         }],//end of r1 Mushroom
     row1SnakeQ:[
         {
             show1Q:"Snakes are",
-            show2A:['Herbivores','Carnivores','Vegan','Orange']
+            show2A:['Herbivores','Carnivores','Vegan','Orange'],
+            show3A:'Carnivores'
         }],
 
         // Start of row 2 Questions
@@ -59,13 +60,13 @@ let questionDb = {
     row2BadgerQ:[
         {
             show1Q:"This type of badger is also the name of a super hero",
-            show2A:['Antman','Minkman','Squirrel Girl','Wolverine'],
+            show2A:['Antman','Minkman','Wolverine','Squirrel Girl'],
             show3A:'Wolverine'
         }],
     row2MushQ:[
         {
             show1Q:"Mushrooms are made up of this % of water",
-            show2A:['50%','60%','80%','90%'],
+            show2A:['50%','90%','80%','60%'],
             show3A:"90%"
         }],
     row2SnakeQ:[
@@ -233,7 +234,7 @@ function row1Q2(event){
         choice1.addEventListener('click', check)
 
         function check(event){
-            if(event.target.id=='option1'){
+            if(event.target.id=='option2'){
                 console.log('Right');
                 questBox.removeChild(question);
                 questBox.removeChild(answerBg);
@@ -302,7 +303,7 @@ function row1Q3(event){
         choice1.addEventListener('click', check)
 
         function check(event){
-            if(event.target.id=='option1'){
+            if(event.target.id==='option0'){
                 console.log('Right');
                 questBox.removeChild(question);
                 questBox.removeChild(answerBg);
@@ -390,86 +391,22 @@ function row1Q4(event){
 }
 
 //end of game
-// row 1 question 4;
-// Buttons to start the row, making questions appear
 function finish(event){
+    let questBox = document.getElementById('questionBg');
     let randomRow = Math.floor(Math.random()*3)+1;
     let randomRightAnswers= Math.floor(Math.random()*4)+1;
     computerScore=randomRow*randomRightAnswers*100; 
-    console.log(computerScore);
+    document.getElementById('computerScoreSpan').innerHTML = computerScore;
 
     if(userScore>computerScore){
         console.log('You win')
+        questBox.innerHTML ="You Win";
     }else if(userScore===computerScore){
-        console.log('Tie')
+        questBox.innerHTML ="You Tie";
     }else{
-        console.log('Computer Wins')
+        questBox.innerHTML ="Computer Wins";
     }
 
-
-    let questBox = document.getElementById('questionBg');
-    let answerBg = document.createElement('div');
-    answerBg.id="answerBgId";
-    
-    // let rando= Math.floor(Math.random()*3);
-    console.log("working");
-    //questAnimate = class who's only purpose is to animate div attach to
-    //can be found first on CSS/style.css line 119
-    questBox.classList.add('questAnimate');
-
-    //create div to add to #questionBg
-    let question = document.createElement("div");
-    //top row found on style.css near line 128
-    question.className='questionTopRow';
-    let questionShow= question.innerHTML = questionDb.row1SnakeQ[0].show1Q;
-    questBox.appendChild(question);
-    
-    //adding timer
-    let timeDiv= document.createElement('div');
-    let seconds= 15;
-    question.appendChild(timeDiv);
-    let timer = setInterval(function(){
-        timeDiv.innerHTML = "Time on the Clock: "+seconds+" seconds";
-        seconds--;
-    },1000)
-
-    //after 17 seconds remove animation class using Jquery
-    let redoAnimation = setTimeout(function(){
-        questBox.classList.remove('questAnimate');
-        console.log("removing working")
-    },17000);
-
-    //append answerBg to quetionBg div on index.html line 86
-    questBox.appendChild(answerBg);
-
-    //for loop to pull from Questions Database
-    for(let i=0; i<questionDb.row1SnakeQ[0].show2A.length; i++){
-        let choice1=document.createElement('button');
-        choice1.className = "choiceBtn option"+[i];
-        choice1.id = "option"+[i];
-        console.log(choice1.id);
-        let choiceBtn = choice1.innerHTML = (i+1) + ") " + questionDb.row1SnakeQ[0].show2A[i];
-        answerBg.appendChild(choice1);
-
-        //event listener for choices 
-        choice1.addEventListener('click', check)
-
-        function check(event){
-            if(event.target.id=='option1'){
-                console.log('Right');
-                questBox.removeChild(question);
-                questBox.removeChild(answerBg);
-                userScore+=100;
-                document.getElementById('userScoreSpan').innerText = userScore;
-                clearTimeout(redoAnimation);
-                finish();
-            }else{
-                console.log('wrong');
-                finish()
-            }
-        }
-        
-    }
 }
 
 

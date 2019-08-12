@@ -60,16 +60,250 @@ function row2Start(event){
                 console.log('Right');
                 questBox.removeChild(question);
                 questBox.removeChild(answerBg);
-                userScore+=100;
+                userScore+=200;
                 document.getElementById('userScoreSpan').innerText = userScore;
                 clearTimeout(redoAnimation);
                 row2Q2();
             }else{
                 console.log('wrong');
-                return;
+                finish();
             }
         }
     }
 }
 
 document.querySelector('#start200Btn').addEventListener('click', row2Start)
+
+
+// row2 question 2();
+// Buttons to start the row, making questions appear
+function row2Q2(event){
+    let questBox = document.getElementById('questionBg');
+    let answerBg = document.createElement('div');
+    answerBg.id="answerBgId";
+    
+    // let rando= Math.floor(Math.random()*3);
+    console.log("working");
+    //questAnimate = class who's only purpose is to animate div attach to
+    //can be found first on CSS/style.css line 119
+    questBox.classList.add('questAnimate');
+
+    //create div to add to #questionBg
+    let question = document.createElement("div");
+    //top row found on style.css near line 128
+    question.className='questionTopRow';
+    let questionShow= question.innerHTML = questionDb.row2BadgerQ[0].show1Q;
+    questBox.appendChild(question);
+
+    //adding timer
+    let timeDiv= document.createElement('div');
+    let seconds= 15;
+    question.appendChild(timeDiv);
+    let timer = setInterval(function(){
+        timeDiv.innerHTML = "Time on the Clock: "+seconds+" seconds";
+        seconds--;
+    },1000)
+
+    //after 17 seconds remove animation class 
+    let redoAnimation = setTimeout(function(){
+        questBox.classList.remove('questAnimate');
+        console.log("removing working")
+    },17000);
+
+    //append answerBg to quetionBg div on index.html line 86
+    questBox.appendChild(answerBg);
+
+    //for loop to pull from Questions Database
+    for(let i=0; i<questionDb.row2BadgerQ[0].show2A.length; i++){
+        let choice1=document.createElement('button');
+        choice1.className = "choiceBtn option"+[i];
+        choice1.id = "option"+[i];
+        console.log(choice1.id);
+        let choiceBtn = choice1.innerHTML = (i+1) + ") " + questionDb.row2BadgerQ[0].show2A[i];
+        answerBg.appendChild(choice1);
+
+        //event listener for choices 
+        choice1.addEventListener('click', check)
+
+        function check(event){
+            if(event.target.id=='option2'){
+                console.log('Right');
+                questBox.removeChild(question);
+                questBox.removeChild(answerBg);
+                userScore+=200;
+                document.getElementById('userScoreSpan').innerText = userScore;
+                // stops redo animation from exiting window
+                clearTimeout(redoAnimation);
+                row2Q3();
+            }else{
+                console.log('wrong');
+                finish();
+            }
+        }
+        
+    }
+}
+
+// row 1 question 3;
+// Buttons to start the row, making questions appear
+function row2Q3(event){
+    let questBox = document.getElementById('questionBg');
+    let answerBg = document.createElement('div');
+    answerBg.id="answerBgId";
+    
+    // let rando= Math.floor(Math.random()*3);
+    console.log("working");
+    //questAnimate = class who's only purpose is to animate div attach to
+    //can be found first on CSS/style.css line 119
+    questBox.classList.add('questAnimate');
+
+    //create div to add to #questionBg
+    let question = document.createElement("div");
+    //top row found on style.css near line 128
+    question.className='questionTopRow';
+    let questionShow= question.innerHTML = questionDb.row2MushQ[0].show1Q;
+    questBox.appendChild(question);
+    
+    //adding timer
+    let timeDiv= document.createElement('div');
+    let seconds= 15;
+    question.appendChild(timeDiv);
+    let timer = setInterval(function(){
+        timeDiv.innerHTML = "Time on the Clock: "+seconds+" seconds";
+        seconds--;
+    },1000)
+
+    //after 17 seconds remove animation class using Jquery
+    let redoAnimation = setTimeout(function(){
+        questBox.classList.remove('questAnimate');
+        console.log("removing working")
+    },17000);
+
+    //append answerBg to quetionBg div on index.html line 86
+    questBox.appendChild(answerBg);
+
+    //for loop to pull from Questions Database
+    for(let i=0; i<questionDb.row2MushQ[0].show2A.length; i++){
+        let choice1=document.createElement('button');
+        choice1.className = "choiceBtn option"+[i];
+        choice1.id = "option"+[i];
+        console.log(choice1.id);
+        let choiceBtn = choice1.innerHTML = (i+1) + ") " + questionDb.row2MushQ[0].show2A[i];
+        answerBg.appendChild(choice1);
+
+        //event listener for choices 
+        choice1.addEventListener('click', check)
+
+        function check(event){
+            if(event.target.id=='option1'){
+                console.log('Right');
+                questBox.removeChild(question);
+                questBox.removeChild(answerBg);
+                userScore+=200;
+                document.getElementById('userScoreSpan').innerText = userScore;
+                // stops redo animation from exiting window
+                clearTimeout(redoAnimation);
+                row2Q4();
+                // $('#questionBg').removeClass('questAnimate');
+            }else{
+                console.log('wrong');
+                finish();
+            }
+        }
+        
+    }
+}
+
+// row 1 question 4;
+// Buttons to start the row, making questions appear
+function row2Q4(event){
+    let questBox = document.getElementById('questionBg');
+    let answerBg = document.createElement('div');
+    answerBg.id="answerBgId";
+    
+    // let rando= Math.floor(Math.random()*3);
+    console.log("working");
+    //questAnimate = class who's only purpose is to animate div attach to
+    //can be found first on CSS/style.css line 119
+    questBox.classList.add('questAnimate');
+
+    //create div to add to #questionBg
+    let question = document.createElement("div");
+    //top row found on style.css near line 128
+    question.className='questionTopRow';
+    let questionShow= question.innerHTML = questionDb.row2SnakeQ[0].show1Q;
+    questBox.appendChild(question);
+    
+    //adding timer
+    let timeDiv= document.createElement('div');
+    let seconds= 15;
+    question.appendChild(timeDiv);
+    let timer = setInterval(function(){
+        timeDiv.innerHTML = "Time on the Clock: "+seconds+" seconds";
+        seconds--;
+    },1000)
+
+    //after 17 seconds remove animation class using Jquery
+    let redoAnimation = setTimeout(function(){
+        questBox.classList.remove('questAnimate');
+        console.log("removing working")
+    },17000);
+
+    //append answerBg to quetionBg div on index.html line 86
+    questBox.appendChild(answerBg);
+
+    //for loop to pull from Questions Database
+    for(let i=0; i<questionDb.row2SnakeQ[0].show2A.length; i++){
+        let choice1=document.createElement('button');
+        choice1.className = "choiceBtn option"+[i];
+        choice1.id = "option"+[i];
+        console.log(choice1.id);
+        let choiceBtn = choice1.innerHTML = (i+1) + ") " + questionDb.row2SnakeQ[0].show2A[i];
+        answerBg.appendChild(choice1);
+
+        //event listener for choices 
+        choice1.addEventListener('click', check)
+
+        function check(event){
+            if(event.target.id=='option3'){
+                console.log('Right');
+                questBox.removeChild(question);
+                questBox.removeChild(answerBg);
+                userScore+=200;
+                document.getElementById('userScoreSpan').innerText = userScore;
+                clearTimeout(redoAnimation);
+                finish();
+            }else{
+                console.log('wrong');
+                finish()
+            }
+        }
+        
+    }
+}
+
+//end of game
+function finish(event){
+    let questBox = document.getElementById('questionBg');
+    let randomRow = Math.floor(Math.random()*3)+1;
+    let randomRightAnswers= Math.floor(Math.random()*4)+1;
+    computerScore=randomRow*randomRightAnswers*100; 
+    document.getElementById('computerScoreSpan').innerHTML = computerScore;
+
+    if(userScore>computerScore){
+        console.log('You win')
+        questBox.innerHTML ="You Win";
+        // questBox.removeChild(question);
+        // questBox.removeChild(answerBg);
+
+    }else if(userScore===computerScore){
+        questBox.innerHTML ="You Tie";
+        // questBox.removeChild(question);
+        // questBox.removeChild(answerBg);
+    }else{
+        questBox.innerHTML ="Computer Wins";
+        // questBox.removeChild(question);
+        // questBox.removeChild(answerBg);
+    }
+
+}
