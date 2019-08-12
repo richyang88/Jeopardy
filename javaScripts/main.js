@@ -53,7 +53,7 @@ let questionDb = {
         row2hiQ:[
             {
                 show1Q:"How to say Hello in French",
-                show2A:['Howdy','Ni Hao','Hola','Bonjour'],
+                show2A:['Howdy','Nyob Zoo','Hola','Bonjour'],
                 show3A:'Bonjour'
             }
         ],
@@ -79,9 +79,9 @@ let questionDb = {
          // Start of row 3 Questions
          row3hiQ:[
             {
-                show1Q:"How to say Hello in French",
-                show2A:['Howdy','Ni Hao','Hola','Bonjour'],
-                show3A:'Bonjour'
+                show1Q:"How to say Good Morning in Japanese",
+                show2A:['Ohayo','Ni Hao','Habari za asubuhi','Konnichiwa'],
+                show3A:'Ohayo'
             }
         ],
         row3BadgerQ:[
@@ -164,8 +164,8 @@ function row1Start(event){
 
         //event listener for choices 
         choice1.addEventListener('click', check)
-        
     }
+
     function check(event){
         if(event.target.id=='option1'){
             console.log('Right');
@@ -184,7 +184,6 @@ function row1Start(event){
             return;
         }
     }
-
 }
 
 document.querySelector('#start100Btn').addEventListener('click', row1Start)

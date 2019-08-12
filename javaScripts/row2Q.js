@@ -25,6 +25,15 @@ function row2Start(event){
     let questionShow= question.innerHTML = questionDb.row2hiQ[0].show1Q;
     questBox.appendChild(question);
 
+    //adding timer
+    let timeDiv= document.createElement('div');
+    let seconds= 15;
+    question.appendChild(timeDiv);
+    let timer = setInterval(function(){
+        timeDiv.innerHTML = "Time on the Clock: "+seconds+" seconds";
+        seconds--;
+    },1000)
+
     //after 17 seconds remove animation class using Jquery
     let redoAnimation = setTimeout(function(){
         $('#questionBg').removeClass('questAnimate');
@@ -47,7 +56,7 @@ function row2Start(event){
         choice1.addEventListener('click', check)
 
         function check(event){
-            if(event.target.id=='option1'){
+            if(event.target.id=='option3'){
                 console.log('Right');
                 questBox.removeChild(question);
                 questBox.removeChild(answerBg);
