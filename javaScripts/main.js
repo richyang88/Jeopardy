@@ -173,9 +173,8 @@ function row1Start(event){
             console.log(redoAnimation);
             row1Q2();
         }else{
-            console.log('wrong');
             // go to wrong answer function
-            return;
+            finish();
         }
     }
 }
@@ -245,7 +244,7 @@ function row1Q2(event){
                 row1Q3();
             }else{
                 console.log('wrong');
-                return;
+                finish();
             }
         }
         
@@ -315,7 +314,7 @@ function row1Q3(event){
                 // $('#questionBg').removeClass('questAnimate');
             }else{
                 console.log('wrong');
-                return;
+                finish();
             }
         }
         
@@ -394,6 +393,20 @@ function row1Q4(event){
 // row 1 question 4;
 // Buttons to start the row, making questions appear
 function finish(event){
+    let randomRow = Math.floor(Math.random()*3)+1;
+    let randomRightAnswers= Math.floor(Math.random()*4)+1;
+    computerScore=randomRow*randomRightAnswers*100; 
+    console.log(computerScore);
+
+    if(userScore>computerScore){
+        console.log('You win')
+    }else if(userScore===computerScore){
+        console.log('Tie')
+    }else{
+        console.log('Computer Wins')
+    }
+
+
     let questBox = document.getElementById('questionBg');
     let answerBg = document.createElement('div');
     answerBg.id="answerBgId";

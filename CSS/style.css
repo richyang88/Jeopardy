@@ -118,7 +118,7 @@ body{
     transform: translate(-2000px,0px);
     position: absolute;
     z-index: 1000;
-    background-image: url('../images/snakeHead.png'); 
+    /* background-image: url('../images/snakeHead.png');  */
     background-size: cover;
     background-position: center; 
 }
